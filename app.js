@@ -9,6 +9,7 @@ function filtarProductos(valor) {
     const productosFiltrados = listaDeProductos.filter(unElemento => unElemento.precio <= valor)
     // agrega un nuevo nodo HTML
     productosFiltrados.forEach(producto => {
+        document.getElementById("lista").innerHTML = "" 
         const elemento = document.createElement('p')
         elemento.innerText  = producto.nombre
         document.getElementById("lista").appendChild(elemento)
